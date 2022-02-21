@@ -1,0 +1,24 @@
+{
+    "executionRoleArn": "arn:aws:iam::013219796457:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "Python5000",
+            "image": "<IMAGE_NAME>",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 5000,
+                    "protocol": "tcp",
+                    "containerPort": 5000
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "family": "ecs-demo"
+}
