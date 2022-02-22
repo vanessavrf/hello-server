@@ -8,7 +8,7 @@
     "containerDefinitions": [
       {
         "name": "hello-server",
-        "image": "$REPOSITORY_URI:$IMAGE_TAG",
+        "image": "<IMAGE_NAME>",
         "logConfiguration": {
           "logDriver": "awslogs",
           "options": {
