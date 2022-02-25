@@ -3,7 +3,7 @@
 
 'use strict'
 
-const greeting = "Tudo belezinha v2"  // Change this line to change your greeting
+const greeting = "Ola v1"  // Change this line to change your greeting
 
 const port = (typeof process.env.PORT !== 'undefined')
   ? process.env.PORT
