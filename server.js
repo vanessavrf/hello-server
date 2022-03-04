@@ -3,7 +3,7 @@
 
 'use strict'
 
-const greeting = "V3 -teste app"  // Change this line to change your greeting
+const greeting = "V1 Boa tarde"  // Change this line to change your greeting
 
 const port = (typeof process.env.PORT !== 'undefined')
   ? process.env.PORT
@@ -27,7 +27,7 @@ function format(o, pretty) {
 
 app.get('/hello/:name', (req, res) => {
   var name = req.params.name
-  let timestamp = Date.now()
+  let timestamp = new Date().toLocaleTimeString();
   res.send(greeting + " " + name + "<br>\n<i>" + timestamp + "</i>\n") 
 })
 app.get('/ping', (req, res) => {
