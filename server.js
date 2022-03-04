@@ -27,7 +27,7 @@ function format(o, pretty) {
 
 app.get('/hello/:name', (req, res) => {
   var name = req.params.name
-  let timestamp = new Date().toLocaleTimeString();
+  let timestamp = new Date().toLocaleTimeString('pt-BR');
   res.send(greeting + " " + name + "<br>\n<i>" + timestamp + "</i>\n") 
 })
 app.get('/ping', (req, res) => {
