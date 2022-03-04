@@ -3,7 +3,7 @@
 
 'use strict'
 
-const greeting = "V1 VALEU"  // Change this line to change your greeting
+const greeting = "V2 Tudo belezinha"  // Change this line to change your greeting
 
 const port = (typeof process.env.PORT !== 'undefined')
   ? process.env.PORT
@@ -27,7 +27,7 @@ function format(o, pretty) {
 
 app.get('/hello/:name', (req, res) => {
   var name = req.params.name
-  var options = { timeZone: 'GMT', timeZoneName: 'short' };
+  var options = { timeZone: 'UTC', timeZoneName: 'short' };
   let timestamp = new Date().toLocaleTimeString('pt-BR',options);
   res.send(greeting + " " + name + "<br>\n<i>" + timestamp + "</i>\n") 
 })
